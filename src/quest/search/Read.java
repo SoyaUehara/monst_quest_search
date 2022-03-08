@@ -6,16 +6,8 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/**
- * Readクラス.ここでFileを読み込む.
- * List; //クエストの一覧
- */
 public class Read {
     final private Map<String, ArrayList<String>> maps = new HashMap<>();
-    /**
-     * コンストラクタ.Fileを読み込む.
-     * @param array　ギミック名
-     */
     public Read(ArrayList<String> array){
         for (String gimmick :array){
             ArrayList<String> list = new ArrayList<>();
