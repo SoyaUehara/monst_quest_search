@@ -13,23 +13,22 @@ public class Search {
     }
     /**
      *
-     * @param List　ギミックがあるクエスト一覧
+     * @param quest_list　ギミックがあるクエスト一覧
      * @param result　検索結果の保存
      * @return 検索結果を返す
      */
-    public ArrayList<String> Searching(ArrayList<String> List, ArrayList<String> result){
+    public ArrayList<String> Searching(ArrayList<String> quest_list, ArrayList<String> result){
         int delete = result.size();
+        ArrayList<String> pure_result = new ArrayList<>();
         if (result.size()==0){
-            result = new ArrayList<>(List);
+            result = new ArrayList<>(quest_list);
         }else{
-            for(String name : List){
+            for(String name : quest_list){
                 if (result.contains(name)){
-                    result.add(name);
+                    pure_result.add(name);
                 }
             }
-            for (int a=0; a<delete; a++){
-                result.remove(result.get(0));
-            }
+            result = pure_result;
         }
         if (result.size()==0){
             System.out.println("クエストがありません");
