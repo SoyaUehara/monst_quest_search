@@ -2,37 +2,15 @@ package quest.search;
 import java.util.ArrayList;
 
 /**
- * Searchクラス。
- * Gimmick_Data　//ギミックのリスト
+ * Searchクラス.
+ * gimmick_data　//ギミックのリスト
  */
 public class Search {
     /**
-     *コンストラクタ。誰でも使用できるようにギミックの一覧を表示する。
+     *コンストラクタ 誰でも使用できるようにギミックの一覧を表示する.
      */
     public Search(){
-        final ArrayList<String> Gimmick_Data = new ArrayList<>(){
-            {
-                add("ギミック名");
-                add("Damage_wall");
-                add("Block");
-                add("Deceleration_Wall");
-                add("Gravity_Barrier");
-                add("Magic_Circle");
-                add("Mines");
-                add("Warp");
-                add("wind");
-            }
-        };
-        System.out.print("[");
-        for (int i=0; i<Gimmick_Data.size(); i++){
-            System.out.print(Gimmick_Data.get(i));
-            if (i<Gimmick_Data.size()-1){
-                System.out.print("　");
-            }
-        }
-        System.out.println("]");
     }
-
     /**
      *
      * @param List　ギミックがあるクエスト一覧
@@ -50,7 +28,7 @@ public class Search {
                 }
             }
             for (int a=0; a<delete; a++){
-                result.remove(result.indexOf(result.get(0)));
+                result.remove(result.get(0));
             }
         }
         if (result.size()==0){
